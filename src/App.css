@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+:root{
+    --primary-color:rgb(228, 228, 228);
+    --secondary-color:  white;
+    --text-color: black;
+    --subtext-color:#888;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    color: var(--text-color)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container{
+    margin: 0 auto;
+    width: 100%;
+    height: 90vh;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    flex-direction: row;
+}
+
+.calculator{
+    padding:20px 20px 20px 20px;
+   border-radius:30px;
+   background-color: var(--secondary-color);
+}
+
+
+
+.keys{
+    justify-self: center;  
+    margin: 0px 5px 0px 5px; 
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background-color: var(--secondary-color);
+    font-weight: bold;
+    opacity: 70%;
+}
+
+.keys:hover{
+    background-color: var(--primary-color);;
+    cursor: pointer;
+}
+
+.special-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.special-row input{
+    font-size:0.75rem;
+    opacity: 70%;
+    width: 20px;
+    height: 20px;
+    font-weight: bold;
+}
+.special-row svg{
+    opacity: 70%;
+}
+
+.special-row input:hover{
+    opacity: 100%;
+    font-weight:bolder;
+    cursor: pointer;
+}
+
+.special-row svg:hover{
+    opacity: 100%;
+    font-weight:bolder;
+    cursor: pointer;
+}
+
+.special-row input[value="erase"]{
+    width: 20px;
+    height: 15px;
+}
+.special-keys{
+    flex:1;
+    width:30px;
+    height:30px;
+    outline:none;
+    border:none;
+    background-color: var(--secondary-color);;
+}
+
+.display{
+    overflow-inline:visible  ;
+    background-color: var(--secondary-color);
+    
+}
+
+.display input{
+    background-color: var(--secondary-color);
+    text-align:right;
+    outline: none;
+    border:none;
+    width:270px;
+    height: 100px;
+    padding: 0px 5px 0px 5px;
+    font-family: monospace;
+    font-weight: bolder;
+    font-size: 50px;
+    overflow:visible;
+}
+
+.history{
+    text-align: right;
+    max-height: 70px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    
+}
+
+.history::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar track */
+    background-color: var(--primary-color); /* Background color of the track */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .history::-webkit-scrollbar-thumb {
+    background-color: var(--text-color); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
   }
-  to {
-    transform: rotate(360deg);
+  
+  .history::-webkit-scrollbar-thumb:hover {
+    background-color: (var(--subtext-color)); /* Change thumb color on hover */
   }
+  
+
+.history{
+    font-family: monospace;
+    color: var(--subtext-color);
+    padding-right: 5px;
+}
+.history li{
+    list-style: none;
+}
+.footer{
+   display:flex;
+   height: 10vh;
+   align-items: center;
+    justify-content:center;
+    background-color: var(--primary-color);;
+
+}
+.footer input{
+    font-size:0.75rem;
+    opacity: 70%;
+    width: 80px;
+    height: 20px;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px;
+    
+}
+.footer input:hover{
+    opacity: 100%;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.footer-keys{
+    width:30px;
+    height:30px;
+    outline:none;
+    border:none;
+    background-color: var(--primary-color);;
+    
+}
+
+.custom-alert {
+    display:flex;
+    flex:2fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 250px;
+    height: 100px;
+    background-color: var(--subtext-color);
+    color: var(--text-color);
+    border: 1px solid var(--subtext-color);
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed; /* Makes it appear on top of other content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%); /* Center the alert */
+    z-index: 100; /* Ensure it's on top of other elements */
+    font-size: 1rem;
+    
+    outline: none;
+    font-weight: bold;
+  }
+.custom-alert p{
+    font-family: monospace;
+    align-self: center;
+    border:none;
+    background-color: var(--subtext-color);
+    opacity: 70%;
+}
+.custom-alert button{
+    padding: 5px 20px 5px 20px;
+    font-family: monospace;
+    align-self: center;
+    border:none;
+    background-color: var(--subtext-color);
+    opacity: 70%;
+    font-weight: bold;
+    
+}
+
+.custom-alert button:hover{
+    opacity: 100%;
+    font-weight:bolder;
+    cursor: pointer;
 }
