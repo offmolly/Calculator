@@ -1,11 +1,8 @@
-import logo from './logo.svg';
-import Rulers from './ruler.svg';
-import Backspace from './backspace.svg';
 import History from './History';
 import {useState} from 'react';
 import './App.css'
 import Alert from './Alert';
-
+/* eslint-disable */
 function App() {
 
   //Used in function 'handleAlert' to hide or show alerts
@@ -41,7 +38,7 @@ function App() {
       if (endsWithNumeric(value)){
         setValue(value + '*' + '(')
       }
-      else{
+      else{   
       setValue(value+'(')
       }
     }
