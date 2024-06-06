@@ -112,7 +112,7 @@ function App() {
         setSvgcolor('#ff5297');
         break;
       case "WOODY":
-        color =['#F8F4E1','#AF8F6F','#322C2B','#524846'];
+        color =['#F8F4E1','#524846','#322C2B','#524846'];
         setSvgcolor('#322C2B');
         break;
       default :
@@ -133,7 +133,9 @@ function App() {
         calculate();
         event.preventDefault();
       }
-    } 
+    }
+
+
 
 
   return (
