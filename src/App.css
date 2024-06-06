@@ -9,6 +9,34 @@
     color: var(--text-color)
 }
 
+@media (max-width:768px){
+    .keys{
+        font-size: large;
+        width:70px;
+        height: 70px;
+    }
+    .container{
+        height: 80vh;
+    }
+    .special-row input{
+        font-size: 0.85rem;
+        height:25px;
+    }
+    .footer{
+        height: 20vh;
+    }
+    .footer input{
+        font-size: 0.85rem;
+        height: 30px;
+    }
+    .display input{
+        font-size:60px;
+        height:130px;
+    }
+}
+
+
+
 .container{
     margin: 0 auto;
     width: 100%;
