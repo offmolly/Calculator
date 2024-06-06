@@ -203,6 +203,10 @@ function App() {
         <input className='footer-keys' type="button" value="WOODY" onClick={changeColors}/>
         <input className='footer-keys' type="button" value="DEFAULT" onClick={changeColors}/>
       </div>
+    <div className="copyright">
+      <p id="creator">created by offmolly</p>
+      <p id="cpy">copyright 2024</p>
+    </div>
   </>
   );
 }
