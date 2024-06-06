@@ -28,12 +28,11 @@
         flex-wrap:nowrap;
         align-items: center ;
         justify-content:space-around;
-        flex-direction:row-reverse;
+        flex-direction:row
     }
 
     .keys {
         display:flex;
-        
         align-items: center;
         justify-content: center;
         font-size: large;
