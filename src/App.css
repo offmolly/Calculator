@@ -11,32 +11,90 @@
     color: var(--text-color)
 }
 
-@media (max-width:768px){
-    .keys{
-        font-size: large;
-        width:70px;
-        height: 70px;
-    }
-    .container{
+@media (max-width: 768px) {
+    .container {
         height: 80vh;
     }
-    .special-row input{
+    
+    .calculator {
+        width: 80%;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:nowrap;
+        align-items: center ;
+        justify-content:space-around;
+    }
+
+    .keys {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        font-size: large;
+        width: 50px;
+        height: 50px;
+    }
+
+    .special-row input,
+    .footer input {
         font-size: 0.85rem;
-        height:25px;
+        height: 25px;
     }
-    .footer{
-        height: 20vh;
+    .display{
+        display: flex;
+        width:98%;
     }
-    .footer input{
-        font-size: 0.85rem;
-        height: 30px;
-    }
-    .display input{
-        font-size:60px;
-        height:130px;
+    .display input {
+        flex:1;
+        font-size: 40px;
+        height: 100px;
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 }
 
+@media (max-width: 425px) {
+    .buttons{
+        display: block;
+    }
+    .keys {
+        display:inline;
+        font-size:small;
+        width: 50px;
+        height: 50px;
+    }
+    .calculator {
+        width: 280px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .display{
+        display:block;
+    }
+}
+@media (max-width:319px){
+    .calculator{
+        width:280px;
+        height: 60vh;
+    }
+
+    .buttons {
+        width:280px;
+        height:40vh;
+    }
+
+    .keys {
+        display:inline-block;
+        font-size:0.5rem;
+        width: 20px;
+        height: 20px;
+    }
+}
 
 
 .container{
@@ -122,7 +180,7 @@
 }
 
 .display{
-    overflow-inline:visible  ;
+    overflow-inline:visible;
     background-color: var(--secondary-color);
     
 }
