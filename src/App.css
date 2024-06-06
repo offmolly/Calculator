@@ -3,6 +3,8 @@
     --secondary-color:  white;
     --text-color: black;
     --subtext-color:#888;
+    --font:"Space Mono";
+    --font-2:"Roboto";
 }
 
 *{
@@ -66,6 +68,8 @@
     background-color: var(--secondary-color);
     font-weight: bold;
     opacity: 70%;
+    font-family: var(--font);
+    font-size: 1.2rem;
 }
 
 .keys:hover{
@@ -74,6 +78,7 @@
 }
 
 .special-row{
+    padding-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -84,6 +89,8 @@
     width: 20px;
     height: 20px;
     font-weight: bold;
+    font-family: var(--font-2);
+    
 }
 .special-row svg{
     opacity: 70%;
@@ -128,7 +135,7 @@
     width:270px;
     height: 100px;
     padding: 0px 5px 0px 5px;
-    font-family: monospace;
+    font-family: var(--font), monospace;
     font-weight: bolder;
     font-size: 50px;
     overflow:visible;
@@ -161,7 +168,8 @@
   
 
 .history{
-    font-family: monospace;
+    font-family: var(--font), monospace;
+    font-size: 0.75rem;
     color: var(--subtext-color);
     padding-right: 5px;
 }
@@ -179,10 +187,11 @@
 .footer input{
     font-size:0.75rem;
     opacity: 70%;
-    width: 80px;
+    width: 90px;
     height: 20px;
     font-weight: bold;
     padding: 0px 10px 0px 10px;
+    font-family: var(--font-2);
     
 }
 .footer input:hover{
@@ -224,7 +233,7 @@
     font-weight: bold;
   }
 .custom-alert p{
-    font-family: monospace;
+    font-family: var(--font), monospace;
     align-self: center;
     border:none;
     background-color: var(--subtext-color);
@@ -232,7 +241,7 @@
 }
 .custom-alert button{
     padding: 5px 20px 5px 20px;
-    font-family: monospace;
+    font-family: var(--font), monospace;
     align-self: center;
     border:none;
     background-color: var(--subtext-color);

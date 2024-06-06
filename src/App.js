@@ -99,19 +99,19 @@ function App() {
   const changeColors = (e) => {
     var color = []
     switch(e.target.value){
-      case "lights out":
+      case "LIGHTS OUT":
         color =['rgb(20, 20, 20)','rgb(62, 62, 62)','white','#888'];
         setSvgcolor('white');
         break;
-      case "default":
+      case "DEFAULT":
         color =['rgb(228, 228, 228)','white','black','#888'];
         setSvgcolor('black');
         break;
-      case "pretty":
+      case "PRETTY":
         color =['#FFEEF4','white','#ff5297','#FFC0D9'];
         setSvgcolor('#ff5297');
         break;
-      case "woody":
+      case "WOODY":
         color =['#F8F4E1','#AF8F6F','#322C2B','#524846'];
         setSvgcolor('#322C2B');
         break;
@@ -123,7 +123,19 @@ function App() {
       document.documentElement.style.setProperty('--text-color', color[2] );
       document.documentElement.style.setProperty('--subtext-color', color[3] );
     };
-    
+   
+    //handles user input
+    const userInput = (e) =>{
+      setValue(e.target.value)
+    }
+    const handleKeyDown = (event) =>{
+      if (event.key == "Enter"){
+        calculate();
+        event.preventDefault();
+      }
+    } 
+
+
   return (
     <>
     <div className="container">
@@ -131,7 +143,7 @@ function App() {
       <form>
           {isHistoryVisible && viewHistory(history)}
           <div className="display">
-            <input type="text" value={value} wrap="soft"/>
+            <input type="text" value={value} wrap="soft" onChange={userInput} onKeyDown={handleKeyDown}/>
           </div>
         <div className="special-row">
           <input className="special-keys"type="button" value="HISTORY" onClick={handleToggleSideContainer} />
@@ -186,10 +198,10 @@ function App() {
       
     </div>
     <div className='footer'>
-        <input className='footer-keys' type="button" value="lights out" onClick={changeColors}/>
-        <input className='footer-keys' type="button" value="pretty" onClick={changeColors}/>
-        <input className='footer-keys' type="button" value="woody" onClick={changeColors}/>
-        <input className='footer-keys' type="button" value="default" onClick={changeColors}/>
+        <input className='footer-keys' type="button" value="LIGHTS OUT" onClick={changeColors}/>
+        <input className='footer-keys' type="button" value="PRETTY" onClick={changeColors}/>
+        <input className='footer-keys' type="button" value="WOODY" onClick={changeColors}/>
+        <input className='footer-keys' type="button" value="DEFAULT" onClick={changeColors}/>
       </div>
   </>
   );
